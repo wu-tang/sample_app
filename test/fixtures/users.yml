@@ -1,0 +1,4 @@
+wutang:
+  name: takuma ugazin
+  email: ugazin@pepabo.com
+  password_digest: <%= User.digest('password') %>

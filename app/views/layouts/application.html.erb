@@ -14,9 +14,11 @@
     <% flash.each do |message_type, message| %>
       <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>
-
+       
+     <% if logged_in? %>
+        <% else %>
         <%= link_to 'Twitterでログイン', '/auth/twitter', :class => 'btn btn-primary' %>
-
+     <% end %>
         <!--
               <%= href="https://twitter.com/"%><img src="goo.gl/5jbQsu" alt=""
 

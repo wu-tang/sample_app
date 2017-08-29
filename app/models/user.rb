@@ -25,11 +25,11 @@ class User < ApplicationRecord
  #OmniAuthで取得した各データを代入していく
      provider = auth_hash[:provider]
      uid = auth_hash[:uid]
-     name = auth_hash[:info][:nickname]
-     image_url = auth_hash[:info][:image]
+     #name = auth_hash[:info][:nickname]
  
      user = User.find_by(provider: provider, uid: uid)
-     User.create(provider: provider, uid: uid, name: name, image_url: image_url) unless user
+     User.create!(provider: provider, uid: uid) unless user
+     user
      end
    end
 end	

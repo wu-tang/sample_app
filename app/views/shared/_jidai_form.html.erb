@@ -1,0 +1,16 @@
+<%= form_for(@jidai) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <%= f.select :rekishi_id, Rekishi.all.map{|o| [o.name, o.id]} %>
+  <div class="field">
+    <%= f.text_area :name, placeholder: "Compose new jidai..." %>
+  </div>
+
+  <label class="control-label" for="">開始日</label>
+  <%= f.date_select :start_date, {start_year: 1960, end_year: Time.now.year}, class: 'form-control' %>
+
+  <label class="control-label" for="">終了日</label>
+  <%= f.date_select :end_date, {start_year: 1960, end_year: Time.now.year}, class: 'form-control' %>
+
+
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>

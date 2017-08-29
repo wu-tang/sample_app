@@ -2,7 +2,7 @@ require 'test_helper'
 
 class JidaiTest < ActiveSupport::TestCase
   def setup
-    @jidai = Jidai.new(name: "Example Jiken name", start_date: "2017-08-22", end_date: "2017-08-23")
+    @jidai = Jidai.new(name: "Example Jiken name", start_date: "2017-08-22", end_date: "2017-08-23",rekishi_id:1)
   end
 
   test "should be valid" do

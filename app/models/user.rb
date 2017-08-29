@@ -9,6 +9,8 @@ class User < ApplicationRecord
   #validates :password, presence: true, length: { minimum: 6 }
 
   # 渡された文字列のハッシュ値を返す
+
+ has_many :rekishis
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost

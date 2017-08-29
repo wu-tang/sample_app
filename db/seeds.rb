@@ -7,12 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # User
-nippon  = User.create(name: "日本", email: "nippon@pepabo.com")
-antipop = User.create(name: "antipop", email: "antipop@pepabo.com")
+nippon  = User.create(name: "日本", email: "nippon@pepabo.com", password: "nippon")
+antipop = User.create(name: "antipop", email: "antipop@pepabo.com", password: "antipop")
 
 # 歴史
-nengo   = nippon.rekishis.build(name: "年号"); nippon.save
-keireki = antipop.rekishis.build(name: "経歴"); antipop.save
+nengo   = nippon.rekishis.build(name: "年号")
+nippon.save
+keireki = antipop.rekishis.build(name: "経歴")
+antipop.save
 
 # 時代
 ## 年号

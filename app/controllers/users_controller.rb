@@ -21,6 +21,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def nenpyo
+    @user = User.find(params[:id])
+  end
+
   private
 
     def user_params

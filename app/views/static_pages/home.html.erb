@@ -1,7 +1,43 @@
-
 <div class="center jumbotron">
   <h1>ぼくらの歴史</h1>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<!-- 任意のID指定。クラスとデータ属性の指定。 -->
+<div id="carousel-example" class="carousel slide" data-ride="carousel">
+  <!-- インジケーターの設置。下部の○●ボタン。 -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example" data-slide-to="1"></li>
+  </ol>
+
+  <!-- スライドの内容 -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="http://via.placeholder.com/1280x600" alt="">
+    </div>
+
+    <div class="item">
+      <img src="http://via.placeholder.com/1280x600" alt="">
+    </div>
+
+    <div class="item">
+      <img src="http://via.placeholder.com/1280x600" alt="">
+    </div>
+
+    <!--
+    <div class="item active">
+      <img src="http://via.placeholder.com/1280x600" alt="スライド1">
+    </div>
+      ...
+  </div>
+-->
+
+  <!-- 左右の移動ボタン -->
+  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  </a>
 </div>
 
+<div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="3000">

@@ -4,6 +4,8 @@
   <span class="user"><%= link_to rekishi.user.name, rekishi.user %></span>
    -->
   <span class="name"><%= rekishi.name %></span>
+  <%= link_to "delete", {controller: :rekishis, action: :destroy, id: rekishi.id}, method: :delete,
+                                       data: { confirm: "You sure?" } %>
 
   <ol>
     <%= render rekishi.jidais %>

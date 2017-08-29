@@ -1,6 +1,5 @@
 class StaticPagesController < ApplicationController
   def home
-    @rekishi = current_user.rekishis.build if logged_in?
   end
 
   def help

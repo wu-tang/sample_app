@@ -1,0 +1,2 @@
+module RekishisHelper
+end

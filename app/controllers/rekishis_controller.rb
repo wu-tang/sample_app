@@ -1,0 +1,2 @@
+class RekishisController < ApplicationController
+end

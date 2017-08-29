@@ -7,6 +7,5 @@ class CreateJidais < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :jidais, [:rekishi_id, :created_at]
   end
 end

@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   # 渡された文字列のハッシュ値を返す
 
- has_many :rekishis
+ has_many :rekishis, dependent: :destroy
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost

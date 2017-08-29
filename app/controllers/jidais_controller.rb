@@ -1,0 +1,2 @@
+class JidaisController < ApplicationController
+end

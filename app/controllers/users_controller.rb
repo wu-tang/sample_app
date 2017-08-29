@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @rekishis = @user.rekishis
+
   end
 
   def new

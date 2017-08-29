@@ -1,0 +1,11 @@
+<li id="rekishi-<%= rekishi.id %>">
+
+ <!--
+  <span class="user"><%= link_to rekishi.user.name, rekishi.user %></span>
+   -->
+  <span class="name"><%= rekishi.name %></span>
+
+  <ol>
+    <%= render rekishi.jidais %>
+  </ol>
+</li>

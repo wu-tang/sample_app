@@ -11,16 +11,20 @@
   </head>
  <body>
     <%= render 'layouts/header' %>
-    <div class="container">
-      <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <% end %>
+    <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    <% end %>
 
-      +<%= link_to 'Twitterでログイン', '/auth/twitter' %>
+        <%= link_to 'Twitterでログイン', '/auth/twitter', :class => 'btn btn-primary' %>
 
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
-    </div>
+        <!--
+              <%= href="https://twitter.com/"%><img src="goo.gl/5jbQsu" alt=""
+
+              +<%= link_to 'Twitterでログイン', '/auth/twitter' %>
+            -->
+
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

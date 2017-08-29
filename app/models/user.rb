@@ -8,6 +8,9 @@ class User < ApplicationRecord
   #has_secure_password
   #validates :password, presence: true, length: { minimum: 6 }
 
+  ### XXX
+  has_many :rekishis
+
   # 渡された文字列のハッシュ値を返す
 
  has_many :rekishis, dependent: :destroy

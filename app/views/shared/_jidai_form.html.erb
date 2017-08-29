@@ -1,6 +1,6 @@
 <%= form_for(@jidai) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <%= f.select :rekishi_id, current_user.rekishis.map{|r|r.name} %>
+  <%= f.select :rekishi_id, current_user.rekishis %>
   <div class="field">
     <%= f.text_area :name, placeholder: "Compose new jidai..." %>
   </div>

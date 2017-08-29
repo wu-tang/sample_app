@@ -8,7 +8,7 @@ class JidaisController < ApplicationController
 
   def create
     @jidai = Jidai.new(jidai_params)
-    if @jidai.save
+    if @jidai.save!
       flash[:success] = "ジダイが作成されました！"
       redirect_to root_url
     else

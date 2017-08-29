@@ -4,6 +4,9 @@ class SessionsController < ApplicationController
   end
 
   def create
+    #binding.pry
+    Rails.logger.debug request.env['omniauth.auth'].inspect
+
     @user = User.find_or_create_from_auth_hash(request.env['omniauth.auth'])
     if @user
       puts "#--------------------#{@user.id}"

@@ -1,7 +1,8 @@
 <%= form_for(@rekishi) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
+    <label class="control-label" for="">レキシ名</label>
   <div class="field">
-    <%= f.text_area :name, placeholder: "Compose new rekishi..." %>
+    <%= f.text_area :name, placeholder: "「学歴・職歴」「バンド歴」「タバコ歴」など" %>
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>

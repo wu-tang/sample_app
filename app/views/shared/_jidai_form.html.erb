@@ -1,8 +1,10 @@
 <%= form_for(@jidai) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
+  <label class="control-label" for="">どのレキシ？</label>
   <%= f.select :rekishi_id, current_user.rekishis %>
+    <label class="control-label" for="">ジダイ名</label>
   <div class="field">
-    <%= f.text_area :name, placeholder: "Compose new jidai..." %>
+    <%= f.text_area :name, placeholder: "「小学校」「◯◯社」など" %>
   </div>
 
   <label class="control-label" for="">開始日</label>

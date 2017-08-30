@@ -5,7 +5,9 @@
       <h1>
         <%#= gravatar_for @user %>
         <%= @user.name %>
-      </h1>
+        <li><%= link_to "レキシを追加", rekishi_path %></li>
+        <li><%= link_to "ジダイを追加", jidai_path %></li>
+     </h1>
     </section>
   </aside>
   <div class="col-md-8">

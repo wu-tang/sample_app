@@ -1,3 +1,6 @@
+        <%= image_tag 'https://user-images.githubusercontent.com/31360339/29855633-1faad8a4-8d88-11e7-995a-a32e51d52c48.png', :alt => ' ジダイを刻め' %>
+<br>
+<br>
 <%= form_for(@jidai) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <%= f.select :rekishi_id, current_user.rekishis %>
